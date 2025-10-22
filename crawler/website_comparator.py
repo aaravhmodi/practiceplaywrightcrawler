@@ -458,3 +458,12 @@ class WebsiteComparator:
             "website1_pages_per_element": round(len(self.website1_data["pages"]) / max(self.website1_data["total_images"] + self.website1_data["total_forms"] + self.website1_data["total_tables"], 1), 2),
             "website2_pages_per_element": round(len(self.website2_data["pages"]) / max(self.website2_data["total_images"] + self.website2_data["total_forms"] + self.website2_data["total_tables"], 1), 2)
         }
+
+    def is_same_domain(self, url1, url2):
+        """Check if two URLs are from the same domain"""
+        try:
+            domain1 = urlparse(url1).netloc
+            domain2 = urlparse(url2).netloc
+            return domain1 == domain2
+        except:
+            return False

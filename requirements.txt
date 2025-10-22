@@ -4,3 +4,5 @@ scikit-learn
 lxml
 fpdf2
 requests
+pytest
+pytest-cov
