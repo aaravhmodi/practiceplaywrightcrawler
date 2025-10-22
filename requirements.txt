@@ -1,0 +1,6 @@
+playwright
+beautifulsoup4
+scikit-learn
+lxml
+fpdf2
+requests
